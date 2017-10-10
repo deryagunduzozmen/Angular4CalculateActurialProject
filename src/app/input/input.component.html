@@ -1,0 +1,29 @@
+
+<br>
+<br>
+<div class="row">
+ <div class="col-sm-2 form-group">
+        <label for="mainLimit">Main Limit</label>
+    <div class="input-group"> 
+        <span class="input-group-addon">£</span>
+        <input type="number" [(ngModel)]="mainLimit" value="1000000" min="0" step="1000000" data-number-to-fixed="2" data-number-stepfactor="100" class="form-control currency" id="mainLimit" />
+    </div>
+        </div>
+        <div class="col-sm-2 form-group">
+        <label for="mainRetention">Main Retention</label>
+    <div class="input-group"> 
+        <span class="input-group-addon">£</span>
+        <input type="number" value="1000000" [(ngModel)]="mainRetention" min="0" step="1000000" data-number-to-fixed="2" data-number-stepfactor="100" class="form-control currency" id="mainRetention" />
+    </div>
+        </div>
+        <div class="col-sm-2 form-group">
+  <label for="moduleSelection">Type of Execution</label>
+  <select class="form-control" id="typeOfExecutionSelection" [(ngModel)]="selectedType" (ngModelChange)="onTypeChange($event)">
+    <option *ngFor="let type of typeList" [ngValue]="type">{{type}}</option>}
+  </select>
+</div>
+</div>
+<br>
+<div>
+   <button type="button" class="btn btn-default btn-primary" (click)="onCalculateClick()" [disabled]="!AllValuesValid"> Calculate </button>
+</div>

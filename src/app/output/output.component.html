@@ -1,0 +1,26 @@
+
+ <hr>
+ <div class="data-table-box">
+<table  class="table table-striped table-bordered" cellspacing="0" width="80%">
+<thead>
+  <tr>
+    <th>Reference Date</th>
+    <th>Benchmark1</th>
+    <th>Benchmark2</th>
+  </tr>
+</thead>
+<tbody>
+  <tr  *ngFor="let result of results">
+    <td >{{ result.referenceDate  | date: 'dd MMM yyyy' }}</td>
+    <td>{{ result.benchmark1 }}</td>
+    <td>{{ result.benchmark2 }}</td>
+  </tr>
+</tbody>
+</table>
+ </div>
+
+
+
+
+
+
